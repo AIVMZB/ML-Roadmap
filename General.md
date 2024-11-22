@@ -1,9 +1,17 @@
 # General topics of Machine Learning
 
+The content in this markdown includes general machine learning topics, 
+which can be encountered accross different fields of artifitial inteligence.
+
 ## Optimization problem
 
+Optimization is just simply the process of finding set of function arguments to minimize it.
+Maximization problem is just an inverse. Machine learning is essencially a kind of optimization problem, 
+because the point is to find such weights to make a loss function as small as possible.
 
 ### Introduction
+
+The gradient descent is the basis method for optimizing. In summary, it is just sliding down the function until convergence to a local minima.
 
 Materials:
 >- [Gradient descent](https://www.youtube.com/watch?v=sDv4f4s2SB8)
@@ -19,6 +27,11 @@ Tasks:
 <br>
 
 ### Stochastic gradient descent with momentum
+
+Stochastic gradient descent is an modification to the default gradient descent. 
+The main difference is that the random batch of data is used for optimization,
+ which increasses convergence speed.
+
 Materials
 >- [Stochastic gradient descent](https://youtu.be/vMh0zPT0tLI?si=834bfrxgOuG-3WX3)
 
@@ -26,6 +39,10 @@ Materials
 <br>
 
 ### Gradient descent with momentum
+
+The method does optimization process remembering the momentum of "falling". 
+Imagine a ball sliding down a heel, its momentum makes it slide accross a straight line.
+
 Materials
 >- [Video](https://youtu.be/k8fTYJPd3_I?si=_VfVeqVjWiQqdzyO)
 
@@ -43,6 +60,15 @@ Tasks:
 
 ###
 
+<hr><br>
+
+### Adam
+
+Materials
+>- [Video](https://www.youtube.com/watch?v=JXQT_vxqwIs)
+
+Tasks
+>- Optimize the functions from previous tasks using Adam optimization algorithm. Also plot the descent move. 
 
 <br><br><br>
 
@@ -119,7 +145,24 @@ Tasks
 
 <hr><br><br><br>
 
-# Linear Regression
+## The simplest models
+
+### Linear Regression
+
+The linear regression is method to fit the function $f(x) = wx + b$ to a given data. 
+The learning algorithm finds the best options for $w$ and $b$ to minimize a loss function. 
+A loss function can be:
+- MSE (Mean Squared Error) loss - $\frac{1}{n}\sum_{i=1}^n (\hat{y_i} - y_i) ^ 2$ 
+- MAE (Mean Absolute Error) loss - $\frac{1}{n}\sum_{i=1}^n |\hat{y_i} - y_i|$
+
+where $\hat{y_i}$ - $wx + b$ AKA predicted value, $y_i - groudtruth value, $n$ - set amount.
+
+Materials
+>- [StatQuest](https://youtu.be/7ArmBVF2dCs?si=lfe0pGuiNWxFPlRU)
 
 Tasks:
->- Using given kaggle [dataset](https://www.kaggle.com/datasets/andonians/random-linear-regression) do linear regression on it. Provide a plot, which visualizes the regressed line comparing to actual data.
+>- Using given kaggle [dataset](https://www.kaggle.com/datasets/andonians/random-linear-regression) do linear regression on it. 
+>- Split the dataset to train and test.
+>- Provide a plot, which visualizes the regressed line comparing to actual data. 
+>- Calculate the `R2` metric using test subset. 
+
