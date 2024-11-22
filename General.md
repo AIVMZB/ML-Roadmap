@@ -155,7 +155,7 @@ A loss function can be:
 - MSE (Mean Squared Error) loss - $\frac{1}{n}\sum_{i=1}^n (\hat{y_i} - y_i) ^ 2$ 
 - MAE (Mean Absolute Error) loss - $\frac{1}{n}\sum_{i=1}^n |\hat{y_i} - y_i|$
 
-where $\hat{y_i}$ - $wx + b$ AKA predicted value, $y_i - groudtruth value, $n$ - set amount.
+where $\hat{y_i}$ - $wx + b$ AKA predicted value, $y_i$ - groudtruth value, $n$ - set amount.
 
 Materials
 >- [StatQuest](https://youtu.be/7ArmBVF2dCs?si=lfe0pGuiNWxFPlRU)
