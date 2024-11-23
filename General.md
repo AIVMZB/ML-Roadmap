@@ -155,7 +155,7 @@ A loss function can be:
 - MSE (Mean Squared Error) loss - $\frac{1}{n}\sum_{i=1}^n (\hat{y_i} - y_i) ^ 2$ 
 - MAE (Mean Absolute Error) loss - $\frac{1}{n}\sum_{i=1}^n |\hat{y_i} - y_i|$
 
-where $\hat{y_i}$ - $wx + b$ AKA predicted value, $y_i$ - groudtruth value, $n$ - set amount.
+where $\hat{y_i}$ = $wx + b$ AKA predicted value, $y_i$ - groudtruth value, $n$ - set amount.
 
 Materials
 >- [StatQuest](https://youtu.be/7ArmBVF2dCs?si=lfe0pGuiNWxFPlRU)
@@ -166,3 +166,55 @@ Tasks:
 >- Provide a plot, which visualizes the regressed line comparing to actual data. 
 >- Calculate the `R2` metric using test subset. 
 
+<hr><br>
+
+### Logistic regression
+
+The main difference between logistic and linear regressions is that the logistic regression can solve classification problem.
+In abstract, the model tries to reproduce the probability of $y$ with given $x$:
+
+$P(y|x)$ 
+
+In technicaly it is a linear regression wrapped by sigmoid function, which bounds an output in [0; 1] range.
+So the model is:
+
+$f(x) = \sigma(wx + b)$
+
+where $\sigma(x) = \frac{e^x}{e^x + 1}$
+
+The cross entropy loss function is used to optimize the model weigths and bias. 
+
+$L(\hat{y}, y) = -\frac{1}{n} \Sigma_{i=1}^n(y \log(\hat{y}) + (1 - y)\log(1 - \hat{y}))$
+
+Materials:
+>- [Andrew Ng](https://youtu.be/hjrYrynGWGA?si=eGT9u4X5lL2dWwvT)
+>- [StatQuest](https://youtu.be/yIYKR4sgzI8?si=iv7Tk-OxDQE1_vrO)
+
+Tasks:
+>- Train a logistic regression model on the [Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database). The fastest way is to use `scikit-learn` Python library. For reference you can use the [tutorial](https://www.datacamp.com/tutorial/understanding-logistic-regression-python) but would be better to find out the steps by your own. 
+>- Evaluate model performance on test set. Plot confusion matrix, calculate presicion and recall.
+
+<hr><br>
+
+### Multilayer Perceptron (MLP) or Feed Forward Network (FFN)
+
+The MLP or FFN are just different names for the same idea. The feed forward network is entrance in deep learning. Essentially it is a stack of layers, where each layer has its size and activation function. The main advantage of MLP is an ability to learn nonlinear dependencies and the main factor, which allows it to happen is an activation function.
+There are the most used of these:
+- [Sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function)
+- [ReLU](https://uk.wikipedia.org/wiki/ReLU)
+- [SoftMax](https://uk.wikipedia.org/wiki/Softmax)
+- [$\tanh$](https://en.wikipedia.org/wiki/Hyperbolic_functions)
+- [GeLU](https://paperswithcode.com/method/gelu)
+
+... and much more.
+
+The MLP model weights are optimized using backpropagation, which is based on chain rule of differentiation.
+
+Materials:
+>- [StatQuest](https://youtu.be/CqOfi41LfDw?si=zRUpAlOQ-5GZREOX)
+
+_Note_: <br>
+The whole Andrew Ng video [course](https://www.youtube.com/watch?v=1waHlpKiNyY&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc) is very much useful to learn machine learning
+
+Tasks:
+>- In the `tasks/mlp.py` you can find the code you need to complete. Read the comments and fill the blank spaces. The main task is to train multilayer perceptron.
