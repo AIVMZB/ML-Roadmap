@@ -71,7 +71,7 @@ def train() -> TrainResults:
     
     ## Specify the suitable value for learning rate ##
     lr = ...
-    optimizer = optim.Adam(model.parameters(), lr=lr)
+    optimizer = optim.Adam(model.parameters(), lr=lr) # Consider using another optimizer
 
     train_loader, val_loader = get_dataloaders()
     train_loader = train_loader
