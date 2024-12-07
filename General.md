@@ -220,14 +220,16 @@ Tasks:
 >- In the `tasks/mlp.py` you can find the code you need to complete. Read the comments and fill the blank spaces. The main task is to train multilayer perceptron.
 
 ### Multilabel classification. Softmax activation function
-The Softmax activation function receives a vector of values and returns a vector with same size. The sum of values of given vector always equal 1 and all vector values lie between 0 and 1. That properties make the Softmax activation close to probability distribution. The Softmax is often set on the output layer of network, which solves multilabel classification problem, so we can interpret the output of such model just as an array of probabilities.
+The Softmax activation function receives a vector of values and returns a vector with same size. The sum of values of given vector always equal 1 and all vector values lie between 0 and 1. That properties make the Softmax activation close to probability distribution. The Softmax is often set on the output layer of network, which solves multilabel classification problem, so we can interpret the output of such model just as an array of probabilities. The `Cross Entropy` Loss function is used to optimize the model. 
 
 $
 \sigma(z) = \frac{e^{z_i}}{\Sigma_{j=1}^K e^{z_j}}
 $
 
+
 Materials:
 >- [Andrew Ng](https://youtu.be/LLux1SW--oM?si=H15N_bCC4125Buqs)
 
 Task:
->- Based on code from `tasks/mpl.py` try to solve this kaggle problem - [Cell Phone Price prediction](https://www.kaggle.com/datasets/atefehmirnaseri/cell-phone-price?select=CellPhone_train.csv)
+>- Based on code from `tasks/mpl.py` try to solve this kaggle problem - [Cell Phone Price prediction](https://www.kaggle.com/datasets/atefehmirnaseri/cell-phone-price?select=CellPhone_train.csv).
+Use `nn.Softmax` and `nn.CrossEntropyLoss`.
