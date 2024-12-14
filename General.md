@@ -147,6 +147,27 @@ Tasks
 
 ## The simplest models
 
+### Classic machine (statistical) learning algorithms
+#### Decision trees, random forest
+
+Materials:
+>- [StatQuest](https://youtu.be/_L39rN6gz7Y?si=LW64mGCFbYLEWN0s)
+>- [Regression Trees](https://youtu.be/g9c66TUylZ4?si=4iEfZ9gnQougOpP2)
+
+
+#### Support Vector Machine (SVM)
+Materials:
+>- [Part 1](https://youtu.be/efR1C6CvhmE?si=gbLV5ll1_oaNXabp)
+>- [Part 2](https://www.youtube.com/watch?v=Toet3EiSFcM)
+>- [Part 3](https://www.youtube.com/watch?v=Qc5IyLW_hns)
+
+
+#### Clustering
+Materials:
+>- [K-means](https://www.youtube.com/watch?v=4b5d3muPQmA)
+>- [DBSCAN](https://www.youtube.com/watch?v=RDZUdRSDOok)
+>- [Hierachical Clustering](https://www.youtube.com/watch?v=7xHsRkOdVwo)
+
 ### Linear Regression
 
 The linear regression is method to fit the function $f(x) = wx + b$ to a given data. 
@@ -219,6 +240,8 @@ The whole Andrew Ng video [course](https://www.youtube.com/watch?v=1waHlpKiNyY&l
 Tasks:
 >- In the `tasks/mlp.py` you can find the code you need to complete. Read the comments and fill the blank spaces. The main task is to train multilayer perceptron.
 
+<hr>
+
 ### Multilabel classification. Softmax activation function
 The Softmax activation function receives a vector of values and returns a vector with same size. The sum of values of given vector always equal 1 and all vector values lie between 0 and 1. That properties make the Softmax activation close to probability distribution. The Softmax is often set on the output layer of network, which solves multilabel classification problem, so we can interpret the output of such model just as an array of probabilities. The `Cross Entropy` Loss function is used to optimize the model. 
 
@@ -233,3 +256,29 @@ Materials:
 Task:
 >- Based on code from `tasks/mpl.py` try to solve this kaggle problem - [Cell Phone Price prediction](https://www.kaggle.com/datasets/atefehmirnaseri/cell-phone-price?select=CellPhone_train.csv).
 Use `nn.Softmax` and `nn.CrossEntropyLoss`.
+
+<hr>
+
+## General approaches in Deep Learning
+
+### Train/Val/Test Split
+
+_Note:_ The split strategy is also dependent on your dataset size. If it's small, sometimes the test and val datasets are the same. Also validation dataset is used to track the learning process detect/prevent overfitting.
+
+Materials:
+>- [Andrew Ng](https://youtu.be/1waHlpKiNyY?si=oterOvAvqbFewGl9)
+>- [Cross validation | Stat Quest](https://www.youtube.com/watch?v=fSytzGwwBVw)
+
+### Bias and Variance (Overfit and Underfit)
+Materials:
+>- [Andrew Ng](https://www.youtube.com/watch?v=SjQyLhQIXSM&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&index=2)
+>- [Stat Quest](https://youtu.be/EuBBz3bI-aA?si=jtU8czcFS8seF0Ju)
+
+<hr>
+
+### How to deal with overfit?
+Materials:
+>- [Regularization](https://www.youtube.com/watch?v=6g0t3Phly2M&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&index=4) (Optional) 
+>- [Concept of dropout](https://youtu.be/D8PJAL-MZv8?si=nnc_jVFzmwuLQK0O)
+>- [Understanding dropout](https://youtu.be/ARq74QuavAo?si=G8fjtRtAILysH5UI)
+>- [Data augmentation, early stopping](https://www.youtube.com/watch?v=BOCLq2gpcGU&list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc&index=8)
